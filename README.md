@@ -6,4 +6,5 @@
 ____
 
 **Frontend** - Contains the entire code for the React App
+
 **Backend** - Contains an Express Server used as a backend for routing contact details to mail
