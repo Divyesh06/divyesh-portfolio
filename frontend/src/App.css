@@ -185,6 +185,13 @@ img {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+}
+
+.socials a:hover{
+  scale: 1.1;
+  background: rgba(255,255,255,0.1);
+  color: var(--primary);
 }
 
 .socials i{
@@ -234,7 +241,15 @@ a {
   color: white;
   font-size: 17px;
   line-height: 1.5;
+  transition: all 0.5s ease-in-out;
 }
+
+.navbar-links a:hover {
+  background-color: rgba(255,255,255,0.1);
+  box-shadow: 0 2px 15px rgba(255,255,255,0.1);
+  color: var(--primary);
+}
+
 
 .navbar-links a:last-child {
   margin-right: 0;

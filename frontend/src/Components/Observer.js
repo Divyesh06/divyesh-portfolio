@@ -4,6 +4,7 @@ import { useNavigate, useLocation} from 'react-router-dom';
 
 let block_scroll_on_location_change = false;
 
+
 function Observer(props) {
     const ref = useRef(null);
     const index = props.index;
