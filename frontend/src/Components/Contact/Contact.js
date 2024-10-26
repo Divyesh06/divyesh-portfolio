@@ -5,11 +5,11 @@ import ContactForm from './ContactForm';
 function Contact(props) {
     return (
         <>
-            <Observer url="/contact"> 
+            <Observer url="/contact"> </Observer>
             <div className='section-title'>Contact</div>
 
             <ContactForm />
-            </Observer>
+            
         </>
 
     );

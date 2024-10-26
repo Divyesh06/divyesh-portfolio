@@ -3,6 +3,8 @@ body {
   font-family: Poppins, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(to right top, #01232a, #021f27, #031a24, #031620, #02111c, #010e1b, #000c1b, #00081a, #00081d, #000720, #000722, #000625);
+  background-color: #01232a;
 }
 
 code {

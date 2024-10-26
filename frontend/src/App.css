@@ -109,13 +109,10 @@ a {
 }
 
 #main {
-  position: fixed;
-  top: 0;
-  left: 0;
   height: 100%;
   overflow-y: auto;
   width: 100%;
-  background-image: linear-gradient(to right top, #01232a, #021f27, #031a24, #031620, #02111c, #010e1b, #000c1b, #00081a, #00081d, #000720, #000722, #000625);
+  
 }
 
 .interactive-link i{

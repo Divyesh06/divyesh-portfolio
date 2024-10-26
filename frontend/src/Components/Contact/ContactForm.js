@@ -1,6 +1,4 @@
 import {React, useRef, useEffect} from 'react';
-import Alert from '../Alert';
-import Contact from './Contact';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -24,7 +22,7 @@ function ContactForm() {
 
             console.log(formJSON)
             
-            fetch('https://portfolio-backend-213v.onrender.com/contact', {
+            fetch('/contact', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(formJSON)

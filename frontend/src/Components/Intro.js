@@ -12,7 +12,7 @@ function Intro() {
     var index = 0;
     return (
         <ScrollAnimation animateIn="fadeIn" animateOut='fadeOut' scrollableParentSelector={"#main"} offset={100} animateOnce duration={1}>
-        <Observer url="/">
+        <Observer url="/"></Observer>
         <div className="intro" id="home">
             <div className="intro-subheading">
                 Creative and Skilled Programmer
@@ -37,7 +37,7 @@ function Intro() {
             <div style={{fontSize: 20, marginTop: 30, marginBottom: 5}}><i class="bi bi-arrow-down-circle" style={{marginRight: 8,}}></i>More About Me</div>
 
         </div>
-        </Observer>
+        
         </ScrollAnimation>
 
     );

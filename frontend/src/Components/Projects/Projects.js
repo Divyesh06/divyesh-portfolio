@@ -59,14 +59,14 @@ function Projects() {
 
     return (
         <>
-        <Observer url="/projects">
+        <Observer url="/projects"></Observer>
         <div className='section-title'>Projects</div>
         <div className='carousel-container'>
             <i class="bi bi-arrow-left" onClick={() => scroll("left")}></i>
             <div ref={carousel} className='carousel'>{project_cards}</div>
             <i class="bi bi-arrow-right" onClick={() => scroll("right")}></i>
         </div>
-        </Observer>
+        
         </>
     );
 

@@ -2,7 +2,7 @@ import {useRef,React, useEffect, useState} from 'react';
 import { NavLink } from 'react-router-dom';
 import { useNavigate, useLocation} from 'react-router-dom';
 
-let triggered_from_scroll = true;
+let block_scroll_on_location_change = false;
 
 function Observer(props) {
     const ref = useRef(null);
@@ -18,25 +18,27 @@ function Observer(props) {
     function onIntersection(entries) {
         console.log(props.url)
         if (entries[0].isIntersecting) {
-             triggered_from_scroll = true;
-             navigate(props.url);
+            block_scroll_on_location_change = true
+            navigate(props.url);
              setTimeout(function() {
-                 triggered_from_scroll = false;
+                 block_scroll_on_location_change = false;
              },100);
         };
      }
     
     function scroll() {
-        if (location.pathname === props.url) {
-            let margin = 100;
-            document.getElementById("main").scrollTo({top: ref.current.getBoundingClientRect().top + document.getElementById("main").scrollTop - margin});
+        
+        if (!block_scroll_on_location_change) {
+            if (location.pathname === props.url) {
+                let margin = 100;
+                window.scrollTo({top: ref.current.getBoundingClientRect().top + window.scrollY - margin, behavior: 'smooth'});
+            }
         }
+        
     }
 
     useEffect(function() {
-        if (!triggered_from_scroll) {
-            scroll();
-        }
+        scroll();
         
     }, [location])
 
@@ -54,7 +56,7 @@ function Observer(props) {
 
     return (
         <>
-            <div ref={ref} style={{height: "90vh",  width: "10px", position: "absolute"}}></div>
+            <div ref={ref} style={{height: "50vh", maxHeight: "100%", width: "10px", position: "absolute"}}></div>
             {props.children}
             
         </>
