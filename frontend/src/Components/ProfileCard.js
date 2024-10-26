@@ -25,7 +25,7 @@ function ProfileCard() {
             <button className='interactive-button' style={{width: "100%"}}><i class="bi bi-chat" style={{marginRight: 10}}></i>Get in Touch</button>
             </NavLink>
             </section>
-            <a href="assets/My CV.pdf" download={"resume.pdf"} className='interactive-link' style={{textAlign: "center"}}><i class="bi bi-download"></i>Download CV</a>
+            <a href="assets/resume.pdf" download={"resume.pdf"} className='interactive-link' style={{textAlign: "center"}}><i class="bi bi-download"></i>Download CV</a>
             
    
             
